@@ -18,7 +18,7 @@ cd Pytorch-RT1-for-Distributed-Training
 
 **Option1:** Download from [GoogleCloud](https://console.cloud.google.com/storage/browser/gresearch/robotics/language_table_blocktoblock_sim)
 
-**Option2:** Download from [!BaiDuYun](https://pan.baidu.com/s/1wWbPgeV5VKjIrXTny40atg?pwd=ft4e)
+**Option2:** Download from [BaiDuYun](https://pan.baidu.com/s/1zpVy-IX48L-YOxkXPUDZCg?pwd=hsbw)
 
 ## Convert Dataset
 ```bash
