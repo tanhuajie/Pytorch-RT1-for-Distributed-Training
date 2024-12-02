@@ -20,6 +20,21 @@ cd Pytorch-RT1-for-Distributed-Training
 
 **Option2:** Download from [BaiDuYun](https://pan.baidu.com/s/1zpVy-IX48L-YOxkXPUDZCg?pwd=hsbw)
 
+## Download Sentence Encoder
+
+Download from [universal-sentence-encoder](https://www.kaggle.com/models/google/universal-sentence-encoder/tensorFlow2/universal-sentence-encoder)
+
+```python
+# Modify the path to universal_sentence_encoder in language_table/common/rt1_tokenizer.py
+
+def tokenize_text(text):
+  """Tokenizes the input text given a tokenizer."""
+  embed = hub.load("/path/to/universal_sentence_encoder")
+  tokens = embed([text])
+  return tokens
+
+```
+
 ## Convert Dataset
 ```bash
 # convert dateset from RLDS to numpy, and split train/test/val
