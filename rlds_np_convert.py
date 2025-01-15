@@ -22,11 +22,10 @@ def create_episode(path,raw_episode,embed=False,embed_model=None,path_embed=None
             step_dict[k] = step[k].numpy()
         for k in observation_keys:
             step_dict[k] = observation[k].numpy()
-        step_dict["instruction"] = decode_inst(step_dict["instruction"])
         episode.append(step_dict)
         if embed:
             step_dict_embed = copy.deepcopy(step_dict)
-            step_dict_embed["instruction"] = embed_model([step_dict_embed["instruction"]])[0].numpy()
+            step_dict_embed["instruction"] = embed_model([decode_inst(step_dict_embed["instruction"])])[0].numpy()
             episode_embed.append(step_dict_embed)
     # save numpy
     np.save(path, episode)
