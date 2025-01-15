@@ -22,7 +22,7 @@ cd Pytorch-RT1-for-Distributed-Training
 
 ## Download Sentence Encoder
 
-Download from [universal-sentence-encoder](https://www.kaggle.com/models/google/universal-sentence-encoder/tensorFlow2/universal-sentence-encoder)
+Download from [universal-sentence-encoder](https://tfhub.dev/google/universal-sentence-encoder-large/5)
 
 ```python
 # Modify the path to universal_sentence_encoder in language_table/common/rt1_tokenizer.py
@@ -51,6 +51,12 @@ python load_np_dataset.py
 # Note: replace the paths with your own.
 python distribute_train.py --gpus 0,1,2,3 --lr 5e-4 --exp_name exp_rt1 --dataset_dir /path/to/your/dataset --log_dir /path/to/your/exp/logs --ckpt_dir /path/to/your/exp/ckpts
 ```
+
+`Train-Loss` can be as follow:
+
+<p align="center" width="100%">
+<img src="./assets/train_log.jpg"  width="98%" height="98%">
+</p>
 
 ## Evaluation on Language-Table Simulator
 ```bash
